@@ -1,0 +1,326 @@
+@font-face {
+    font-family: poppins;
+    src: url("./fonts/Poppins-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+body {
+    font-family: poppins;
+}
+
+header {
+    background-color: #110b11;
+    padding: 1.1rem 1rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: white;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+h1 {
+    width: 20%;
+    text-align: start;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+li {
+    padding: 0 1rem;
+    position: relative;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+}
+
+li a:before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    border-radius: 50px;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+li a:hover:before {
+    content: "";
+    width: 80%;
+    background-color: #ad343e;
+}
+
+/* li a {
+    border-bottom: 1px solid #110b11;
+}
+
+li a:hover {
+    border-color: #ad343e;
+} */
+
+.heroSection {
+    display: flex;
+    justify-content: space-between;
+    padding: 8rem 10%;
+}
+
+.about {
+    width: 50%;
+}
+
+.about .name {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    width: 80%;
+}
+
+.about .name span {
+    color: #ad343e;
+
+}
+
+.contact {
+    width: 35%;
+    padding: 1rem 2rem;
+    background-color: #e9e9ce;
+    border-radius: 8px;
+}
+
+.contact .title {
+    padding-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.contact p {
+    display: flex;
+    align-items: center;
+}
+
+.contact .icon {
+    color: #ad343e;
+    font-size: 1.2rem;
+    padding-right: 0.3rem;
+}
+
+.linkedin {
+    font-size: 2rem;
+    color: #110b11 !important;
+    padding-top: 1rem;
+}
+
+.reasonFather {
+    padding: 8rem 0;
+}
+
+.reason {
+    padding: 3rem 0;
+    text-align: center;
+    background-color: #ad343e;
+}
+
+.reason .title {
+    padding-bottom: 1.5rem;
+    color: #110b11;
+}
+
+.reason .theReason {
+    width: 60%;
+    text-align: center;
+    margin: auto;
+    color: beige;
+}
+
+.portfolio {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+    gap: 4rem;
+    background-color: #e9e9ce;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.portfolioTitle {
+    font-weight: 600;
+    text-align: center;
+    color: #ad343e;
+    padding: 5rem 0;
+}
+
+.box {
+    width: 25%;
+    height: 10rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.box.mosayar {
+    background-image: url("../imgs/mosayar.png");
+}
+
+.box.template {
+    background-image: url("../imgs/Qubly.png");
+}
+
+.box.logo {
+    background-image: url("../imgs/logo.png");
+}
+
+.box.oliver {
+    background-image: url("../imgs/Oliver.png");
+}
+
+.box.easyBank {
+    background-image: url("../imgs/easybank.png");
+}
+
+.box.officeLite {
+    background-image: url("../imgs/OfficeLite.png");
+}
+
+.box.bookMark {
+    background-image: url("../imgs/bookMark.png");
+}
+
+.insideBoxHover {
+    display: none;
+    width: 100%;
+    margin: auto;
+    background-color: RGBA(0.0667, 0.0431, 0.0667, 0.8);
+    height: 100%;
+    border-radius: 10px;
+}
+
+.box:hover .insideBoxHover {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.insideBoxHover a {
+    color: #e9e9ce;
+}
+
+@media (max-width: 1100px) {
+    html {
+        font-size: 14px;
+    }
+
+    .box {
+        height: 7rem;
+    }
+
+}
+
+@media (max-width: 990px) {
+
+    html {
+        font-size: 12px;
+    }
+
+    .heroSection {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .heroSection .about,
+    .heroSection .contact {
+        width: 70%;
+        margin: auto;
+    }
+
+    .heroSection .about {
+        padding: 5rem 0;
+    }
+
+    .heroSection .insideBoxHover {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .insideBoxHover a {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 800px) {
+    html {
+        font-size: 10px;
+    }
+
+    .box {
+        height: 5rem;
+    }
+
+    .insideBoxHover {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .insideBoxHover a {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 8px;
+    }
+
+    .portfolio {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .box {
+        width: 50%;
+        margin: auto;
+        height: 10rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .header a {
+        font-size: 0.8rem;
+    }
+
+
+}
+
+.thisPageRepo {
+    font-size: 1.5rem;
+    background-color: #ad343e;
+    padding: 1rem;
+    text-align: center;
+}
+
+.thisPageRepo a {
+    color: white;
+}
